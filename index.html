@@ -7,12 +7,119 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <div>
+    <div class="navbar">
+      <span class="name">JONATHAN ORTIZ</span>
+      <div class="links">
+        <span class="navbarElement"
+          ><a class="samePageLink" href="#about">About</a></span
+        >
+        <span class="navbarElement"
+          ><a class="samePageLink" href="#projects">Projects</a></span
+        >
+        <span class="navbarElement"
+          ><a class="samePageLink" href="#contacts">Contacts</a></span
+        >
+      </div>
+    </div>
+    <div id="about" class="anchor aboutSection">
       <h1>Hi, I'm Jonathan Ortiz</h1>
-      <h2>
-        I'm a junior software engineer that likes to take on challenges and
-        learn more about the industry.
-      </h2>
+      <p class="summary">
+        I like problem solving and building software which users find intuitive
+        and responsive. I have an interest in both front end and back end
+        development. Graduated from the University of Maryland, College Park
+        with a bachelor's degree in Computer Science. Fluent in both English and
+        Spanish.
+      </p>
+    </div>
+
+    <div class="main">
+      <h2 id="projects" class="anchor">PROJECTS</h2>
+      <p>
+        I have worked on my own personal projects to gain experience with
+        required software engineering skills and what types of problems you have
+        to face.
+      </p>
+      <div class="projectBox">
+        <h3>United States Map Website</h3>
+        <p>Creator & Developer</p>
+        <a target="_blank" href="https://usa-map.vercel.app/">Website</a>
+        <p>
+          Created a website based off of
+          <a target="_blank" href="https://travle.earth/?travle-lang=en"
+            >travle </a
+          >which involves finding the shortest possible path to connect two US
+          states. Users are subsequently given feedback on how optimal their
+          choice was in connecting the two states using the shortest path. This
+          required the knowledge of languages: HTML, CSS, and JavaScript. The
+          websites dynamic behavior is done through React hooks. The map
+          projection was done through the d3.js library. The shortest path and
+          feedback on each choice required the knowledge of data structures and
+          algorithms. Specifically queues and the graph algorithm Breadth-first
+          search(BFS) which I used on the starting state to figure out the
+          distance between it and the destination state. During BFS I would keep
+          track of each first-time visited states and store information on how
+          far away it was from the starting state. This allowed me to work
+          backwords starting at the destination state and using a modified BFS
+          to reach the starting state. The modification involved limiting the
+          states added to the queue by requiring the state to have a distance
+          exactly one less than the current state. This would in turn give the
+          shortest path(s). A guess was said to be close if its distance was off
+          by one to a optimal state. This was found without requiring another
+          BFS, by storing the optimal states they could be itterated over and
+          its neighbors (excluding those in the optimal set) would be the close
+          states.
+        </p>
+      </div>
+      <div class="projectBox">
+        <h3>Blog Full Stack Application</h3>
+        <p>Creator & Developer</p>
+        <a
+          target="_blank"
+          href="https://github.com/jonathan-3char/Blog-web-application"
+          >Preview</a
+        >
+        <p>
+          Created a blogging website where users can create an account and post
+          and view blogs. This involved connecting front end and back end. The
+          front end was programmed in TypeScript using the React library. In
+          order to route to other pages this required React Router which also
+          helped in creating secure routes for pages requiring an account. The
+          back end was done using JavaScript using Node.js. Through express
+          framework I was able to create an API which deals with calls from the
+          front end to handle tasks like viewing, adding and editing data. This
+          data is stored using PostgreSQL through a Docker container. Sessions
+          is handled through Redis which checks each request's cookie to see if
+          the user is logged in. The blog themselves are written using Markdown
+          and then when viewed the text is parsed into HTML elements for a
+          better viewing experience.
+        </p>
+      </div>
+      <div>
+        <h2 id="contacts">CONTACTS</h2>
+        <p>Where you can reach me</p>
+        <ul class="contactList">
+          <li>
+            <a
+              class="socialLinks"
+              href="https://github.com/jonathan-3char"
+              target="_blank"
+            >
+              <img src="assests/github-mark.svg" height="50px" width="50px" />
+              <p class="linkText">GitHub</p>
+            </a>
+          </li>
+          <li>
+            <a
+              class="socialLinks"
+              href="https://www.linkedin.com/in/jonathan-ortiz-6b2444202/"
+              target="_blank"
+            >
+              <img src="assests/LI-In-Bug.png" height="50px" width="50px" />
+              <p class="linkText">LinkedIn</p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
