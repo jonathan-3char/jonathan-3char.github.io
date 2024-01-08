@@ -19,8 +19,10 @@ p {
 }
 
 .main {
-  margin: 50px;
+  margin-top: 50px;
   position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-bottom: 100px;
 }
 
@@ -62,8 +64,8 @@ p {
 }
 
 .summary {
-  width: 700px;
-  margin: auto;
+  max-width: 700px;
+  margin: 0px auto;
   padding: 10px;
   font-size: 24px;
   line-height: 2;
@@ -71,12 +73,18 @@ p {
   border-bottom: solid;
 }
 
+.header {
+  display: flex;
+  background-color: black;
+}
+
 .aboutSection {
-  top: 30px;
+  margin-top: 80px;
   position: relative;
   height: 500px;
   background-color: black;
   color: white;
+  width: 100%;
 }
 
 .navbarElement {
